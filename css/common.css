@@ -1,0 +1,460 @@
+@charset "utf-8";
+
+
+/*----------------------------------------
+    全体に対する基本指定
+----------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Yu Gothic", YuGothic, 游ゴシック, 游ゴシック体, sans-serif;
+    font-weight: 500;
+    color: #2f2a20;
+    background: linear-gradient(45deg, #86c289 0%, #b5d788 13%, #ebd98f 68%, #ff694b 100%);
+    line-height: 1;
+}
+
+.spicy-rice-regular {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Spicy Rice', serif;
+    font-size: 85px;
+    color: #fffdfa;
+    text-align: center;
+    margin: 110px 0 15px;
+}
+
+h3 {
+    font-size: 40px;
+    color: #457648;
+}
+
+/* 幅の制御用クラス */
+
+.inner-1 {
+    width: 1080px;
+    margin: 0 auto;
+    background-color: rgb(255, 253, 250, 0.8);
+    /* ↓要素の姿を確認する。最終的に消す。*/
+    /* outline: 1px solid #00f; */
+    text-align: center;
+    border-radius: 20px;
+}
+
+.inner-2 {
+    text-align: center;
+    width: 880px;
+    margin: 0 auto;
+    /* ↓要素の姿を確認する。最終的に消す。*/
+    /* outline: 1px solid #0f0; */
+}
+
+/* 横並び用クラス */
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 背景塗分け用クラス（文字の色もいれる） */
+
+.bg-1 {
+    background-color: #fffdfa;
+    color: #2f2a20;
+}
+
+.bg-2 {
+    background-color: #2f2a20;
+    color: #fffdfa;
+}
+
+/*----------------------------------------
+    エリアごとの仕上げ（共通パーツのみ）
+----------------------------------------*/
+
+/* header */
+header {
+    padding: 10px;
+}
+
+header nav {
+    line-height: 75px;
+}
+
+header nav ul {
+    column-gap: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+header nav ul li a {
+    color: #2f2a20;
+    transition: color .3s;
+}
+
+header nav ul li a:hover {
+    color: #ff694b;
+}
+
+
+/* footer */
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+footer nav {
+    margin: 10px auto 30px;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer nav ul li a {
+    color: #fffdfa;
+    transition: color .3s;
+}
+
+footer nav ul li a:hover {
+    color: #ff694b;
+}
+
+/* top btn */
+
+
+.top-btn p {
+    width: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 33px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 999;
+}
+
+.top-btn p a {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    background-color: #fffdfa;
+    color: #457648;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s, font-size .3s;
+}
+
+.top-btn p a:hover {
+    opacity: 80%;
+    font-size: 27px;
+}
+
+
+/* sns-icon */
+
+.sns-icon {
+    /* background-color: #ff694b; */
+    position: fixed;
+    top: 95px;
+    right: 0;
+    z-index: 999;
+}
+
+.sns-icon img {
+    margin: 10px 10px;
+    transition: filter .3s;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.sns-icon img:hover {
+    filter: brightness(0.7);
+}
+
+
+
+/* レスポンシブ *
+    
+/* コンテンツ幅の指定方法を修正 */
+.inner-1 {
+    width: auto;
+    /* もともと記述していた「width:960px;」の指定を取り消す */
+    max-width: 1080px;
+    /* 最大幅960px = 960px以下に縮まることができる + 960px以上にはならない*/
+    min-width: 280px;
+    /* 最小幅320px = 960px以上に伸びることができる + 320px以下にはならない*/
+}
+
+/* 見出し画像のフルードイメージ対応 */
+.last img {
+    max-width: 100%;
+    /* 親要素に合わせて伸び縮みさせる＋もとの画像サイズ以上に無理に引き伸ばされることはならない */
+    height: auto;
+}
+
+/* 縦横比を保護：可変的な横幅に合わせて、縦横比が崩れないように高さも合わせる */
+
+/* figure部分のフルード対応 */
+/* .fadeUpTrigger figure{ */
+/* width: 48%;     2つあるfigureの横幅を48%ずつ割り当て（残りの4%が間の余白になる） */
+/* } */
+
+/* 見出し画像のフルードイメージ対応
+.fadeUpTrigger figure img{
+    max-width: 100%;
+    height: auto;
+} */
+
+
+/* -----------------------------------------
+  チェックボックスを非表示 （最後に追記）
+----------------------------------------- */
+.nav-switch {
+    display: none;
+}
+
+@media screen and (max-width:1130px) {
+
+    .inner-1 {
+        width: 90%;
+    }
+
+    /* ハンバーガーボタンを作る */
+    .nav-burger {
+        display: block;
+        /* widthとheightを効かせるためのdisplay切り替え */
+        width: 30px;
+        /* 背景画像の分のサイズを確保 */
+        height: 30px;
+
+        /* ↓ 三本線のボタン画像を背景画像として差し込む */
+        background-image: url(../images/burger_03.png);
+
+        position: fixed;
+        /* ブラウザの上から16px、右から16pxの位置に固定 */
+        top: 16px;
+        right: 16px;
+        z-index: 2;
+        /* 重なり順の指定 */
+    }
+
+    /* 三本線のボタンと✕のボタンの切り替え */
+
+    /* チェックが入っている状態(:checked)の「nav-switch」(inputタグ)の
+「弟である(~)」、「nav-burger」の背景画像を×ボタンの画像に差し替える */
+    .nav-switch:checked~.nav-burger {
+        background-image: url(../images/close_03.png);
+    }
+
+    /* マウスカーソルの調整 */
+    .nav-burger:hover {
+        cursor: pointer;
+    }
+
+    /* ナビゲーションが開いたときの見た目を仕上げる ＝ スタイルを作り変える */
+    .navi {
+        background-color: rgba(251, 246, 246, 0.9);
+        position: fixed;
+        /* ブラウザの画面いっぱいに広げて固定 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        /* 余白の調整 */
+        margin: 0;
+        padding-top: 100px;
+        z-index: 1;
+    }
+
+    nav ul li a {
+        color: #fff;
+        margin: 15px 0;
+    }
+
+
+    nav ul li a:hover {
+        color: rgba(255, 255, 255, 0.6);
+        background: transparent;
+    }
+
+
+
+    nav .flex {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+
+    /* 横並びを縦並びに変える */
+    nav ul li {
+        border: none;
+        border-top: 1px solid #aaa;
+        background-color: transparent;
+        width: auto;
+        line-height: 60px;
+
+    }
+
+    nav ul li:last-child {
+        border-bottom: 1px solid #aaa;
+    }
+
+    /* ★★★ html要編集 !
+... navタグに表示/非表示切り替え用のclass名「navi」を追加 */
+
+    /* class名「navi」を使ってnavタグを丸ごと非表示にする */
+    .navi {
+        display: none;
+    }
+
+    /* inputタグにチェックが入ると「navi」が再表示される */
+    .nav-switch:checked~.navi {
+        display: block;
+    }
+}
+
+/* -----------------------------------------
+  768px以下の画面に向けた記述
+----------------------------------------- */
+
+@media screen and (max-width:768px) {
+
+    /* ヘッダー */
+    header {
+
+
+        width: 100%;
+        /* fixedにより縮まってしまう横幅を直す */
+        padding: 10px 0;
+        /* 余白を小さくする */
+    }
+
+    header h1 {
+        line-height: 1;
+        /* 余計な余白を外す */
+    }
+
+    header h1 img {
+        width: 260px;
+        /* ロゴのサイズを小さくする */
+        height: auto;
+        /* 縦横比を保護 */
+        margin-left: 15px;
+    }
+
+    /* 文字揃えが両端揃えになるよう整える
+    （画面幅が小さいと行送りが増えてバラつきが目立つため） */
+    .text {
+        text-align: justify;
+    }
+
+
+
+
+
+    footer .logo img {
+        width: 90%;
+    }
+
+    .top-btn p {
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 20px;
+    }
+
+    .top-btn p a:hover {
+        opacity: 80%;
+        font-size: 17px;
+    }
+
+    .sns-icon {
+        display: none;
+    }
+
+
+}
+
+/* -----------------------------------------
+  ここから500px以下の画面に向けた記述
+----------------------------------------- */
+
+/* 最小320px幅での表示でも表示崩れがない状態を目指す */
+
+@media screen and (max-width:500px) {
+
+
+    /* ★画像の縮まりすぎに対処 */
+
+    /* まずはheightを固定して縦の縮まりすぎを制御 */
+    /* 縦横比を保護するためにobject-fitとobject-positionを使って画像をカット処理 */
+    h2 img {
+        height: 160px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    /* 各所余白や文字サイズを細かく修正 */
+
+
+
+    /* section部分 */
+    section {
+        padding: 0;
+    }
+
+
+    section h2 {
+        font-size: 16px;
+        margin: 0 15px 20px;
+    }
+
+    /* .text部分 */
+    .text {
+        margin: 0 20px 20px;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    /* figure部分の横並びを縦積みに変更して余白を再調整 */
+    main .flex {
+        flex-direction: column;
+        margin: 0 20px 50px;
+    }
+
+    /* 幅を再指定（48% → 100%）、余白の調整、画像の真ん中寄せ */
+    main figure {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* 商品名のキャプションを左揃え */
+    main figcaption {
+        text-align: left;
+    }
+
+    /* フッター */
+    /* コピーライトの位置を調整 */
+    footer {
+        text-align: center;
+        padding: 0;
+    }
+
+    
+}

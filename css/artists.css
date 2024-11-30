@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h2{
+    margin: 180px 0 15px 0;
+}
+
+/* 曜日たち */
+.date {
+    background-color: #457648;
+    /* line-height: 50px; */
+
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+
+}
+
+.weekday {
+    font-size: 20px;
+
+}
+
+.date .flex {
+    justify-content: center;
+    gap: 70px;
+    margin: 0 20px;
+}
+
+.date .flex li {
+    padding: 10px 0;
+
+}
+
+.date .flex li a {
+    position: relative;
+    display: inline-block;
+    color: #fffdfa;
+    transition: color .3s;
+}
+.date .flex li a:hover{
+    color: #ff4500;
+}
+
+
+.weekday::after {
+    content: '▼';
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    /* padding-bottom: 10px; */
+    margin-top: 10px;
+    line-height: 0;
+}
+
+
+.box {
+    max-width: 1000px;
+    height: 75px;
+    border-radius: 15px;
+    background-color: #fffdfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #457648;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 40px 30px;
+
+}
+
+.day {
+    font-size: 20px;
+    margin-left: 0.5em;
+}
+
+
+/* 写真たち */
+.artist{
+flex-wrap: wrap;
+padding: 0 30px;
+justify-content: center;
+gap: 20px;
+}
+
+.name{
+    color: #2f2a2c;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0 15px;
+}
+
+/* 余白 */
+.inner-1{
+    padding-top: 30px;
+}
+
+
+.bg-2{
+    margin-top: 30px;
+}
+
+@media screen and (max-width:500px) {
+    .artist li {
+        width: 100%;
+    }
+
+    .artist li img {
+        max-width: 100%;
+        height: auto;   
+    }
+
+    main .flex{
+        margin: 0;
+    }
+}

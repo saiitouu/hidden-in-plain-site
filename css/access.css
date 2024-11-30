@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/* 会場 */
+.box1{
+    max-width: 1000px;
+    height: 75px;
+    border-radius: 15px;
+    background-color: #fffdfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #457648;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 40px 30px;
+
+}
+
+.inner-1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.box2{
+    max-width: 1000px;
+    /* height: 400px; */
+    border-radius: 15px;
+    background-color: #fffdfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #457648;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 20px 30px;
+
+}
+
+.address{
+    padding-bottom: 20px;
+}
+
+
+.box3{
+    max-width: 1000px;
+    /* height: 2100px; */
+    border-radius: 15px;
+    background-color: #fffdfa;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #457648;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 40px 30px 40px;
+
+}  
+
+/* 見出し */
+.vehicle{
+    max-width: 1000px;         
+    height: 50px;          
+    background-color:#457648 ; 
+    color:#fffdfa;         
+    line-height: 50px;      
+    text-align: center;
+    font-size: 30px; 
+   margin: 100px 0 30px;
+   position: relative; 
+}
+
+/* 見出し画像 */
+/* .special::before {
+    content: url(../images/car_120x120\ .png);
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    position: absolute; 
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 120px; 
+    height: 120px;
+   padding-left: 150px;
+}  */
+
+.special{
+    margin: 30px 0;
+}
+
+/* .train::before{
+    content: url(../images/train_120x120.png);
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    position: absolute; 
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 120px; 
+    height: 120px;
+   padding-left: 150px; 
+} */
+
+/* .bus::before{
+    content: url(../images/bus_120x120.png);
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    position: absolute; 
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 120px; 
+    height: 120px;
+   padding-left: 150px; 
+} */
+
+/* テキストたち */
+.top-text{
+    color: #457648;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 20px 0 50px;
+    text-align: left;  
+
+}
+
+.second-text{
+    color: #2f2f2f;
+    font-weight: bold;
+    font-size: 25px;
+    
+    text-align: left;
+    margin: 30px 20px 30px 50px;
+
+}
+
+.attention{
+    font-size: 20px;
+}
+
+.caution{
+    margin-left: 100px;    
+}
+
+
+
+
+.bg-2{
+    margin-top: 30px;
+}
+
+.map{
+    width: 90%;
+
+}
+.map iframe{
+    width: 100%;
+}
+
+dd{
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+@media screen and (max-width:500px) {
+
+.vehicle{
+    font-size: 15px;
+    margin: 30px 0;
+}
+.top-text{
+    margin: 15px 0;
+    font-size: 20px;
+
+}
+.second-text{
+    font-size: 17px;
+    margin: 10px 0 10px 5px;
+}
+
+.box3{
+    margin: 0 20px;
+}
+
+dd .second-text.attention{
+    font-size: 15px;
+}
+
+.box1{
+    height: 50px;
+    font-size: 25px;
+    margin: 0 20px 20px;
+}
+div.address{
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+}

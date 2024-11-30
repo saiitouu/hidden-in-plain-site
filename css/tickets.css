@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.inner-1 {
+    border-radius: 20px;
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+
+.title {
+    display: inline-block;
+    margin: 0 auto 30px;
+    /* line-height: 40px; */
+    /* width: 200px; */
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #457648;
+    border-bottom: 4px dotted #457648;
+}
+
+.ticket {
+    border-bottom:3px solid #fffdfa;
+    margin: 0 auto;
+    background-color: #457648;
+    width: 500px;
+    padding: 20px;
+    font-weight: bold;
+    color: #fffdfa;
+    font-size: 25px;
+    letter-spacing: 2px;
+    border-radius: 10px 10px 0 0;
+}
+
+.content {
+    margin: 0 auto;
+    /* background-color: #fffdfa; */
+    width: 500px;
+    color: #457648;
+    font-weight: bold;
+    border-bottom: 2px solid #fffdfa;
+    justify-content: left;
+    text-align: left;
+    font-size: 18px;
+}
+
+.date {
+    width: 300px;
+    background-color: #86c289;
+    padding: 20px;
+    color: #fffdfa;
+}
+
+.date-last {
+    width: 300px;
+    background-color: #86c289;
+    padding: 20px;
+    color: #fffdfa;
+    border-radius: 0 0 0 10px;
+}
+
+.price {
+    width: 200px;
+    background-color: #cfe7d0;
+    padding: 20px;
+}
+
+.price-last {
+    width: 200px;
+    background-color: #cfe7d0;
+    padding: 20px;
+    border-radius: 0 0 10px 0;
+}
+
+.last {
+    border-bottom: none;
+    margin-bottom: 30px;
+}
+
+.text {
+    background-color: #cfe7d0;
+    margin: 0 auto 30px;
+    width: 80vw;
+    max-width: 850px;
+    text-align: left;
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 14px;
+    text-decoration: dotted;
+}
+
+.text ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.text p {
+    padding-left: 30px;
+}
+
+/* タブレット以下 (768px以下) の画面向け */
+@media screen and (max-width: 768px) {
+
+    
+    .ticket, .content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .date, .price, .date-last, .price-last {
+        font-size: 2.7vw;
+        width: 100%;
+        padding: 10px;
+    }
+/*     
+    .inner-1 {
+        padding: 30px 0;
+    } */
+
+    .date-last {
+        /* border-radius: 0; */
+        margin-bottom: 20px;
+    }
+
+    .price-last {
+        margin-bottom: 20px;
+    }
+
+    .text {
+        width: 85vw;
+        font-size: 12px;
+    }
+}
+
+/* スマホ (500px以下) の画面向け */
+@media screen and (max-width: 500px) {
+
+    .title {
+        font-size: 25px;
+    }
+
+    .ticket {
+        margin-bottom: 0;
+    }
+
+    .content {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .date, .price, .date-last, .price-last {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    main .flex {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .date-last {
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+
+    .price-last {
+        border-radius: 0 0 10px 10px;
+        margin-bottom: 20px;
+    }
+
+    .text {
+        max-width: 430px;
+        font-size: 12px;
+    }
+}

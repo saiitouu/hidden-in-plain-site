@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body {
+    color: #457648;
+    font-weight: bold;
+}
+
+.radio dd {
+    display: flex;
+    flex-direction: column;
+    /* 縦方向に並べる */
+    padding-left: 20px;
+    /* 左にインデントを付ける */
+}
+
+.radio dd label {
+    margin-bottom: 10px;
+    /* 各ラジオボタンの間隔を調整 */
+}
+
+input[type="radio"]:checked {
+    accent-color: #457648;
+    /* 選択時の色を変更 */
+}
+
+
+.inner-1 {
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+
+}
+
+.contact {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 600px;
+}
+
+.top-text {
+    margin: 0 auto 30px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #457648;
+    max-width: 500px;
+    color: #fffdfa;
+    padding: 20px 20px;
+    border-radius: 20px;
+    line-height: 1.5;
+}
+
+.contact dt {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #457648;
+    font-weight: bold;
+}
+
+.contact .space {
+    margin-bottom: 30px;
+}
+
+input[type="text"],
+textarea {
+    border: 3px solid #457648;
+    width: 600px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+input[type="text"] {
+    height: 40px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.btn {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #457648;
+    border: none;
+    width: 100px;
+    padding: 5px;
+    border-radius: 15px;
+    color: #fffdfa;
+    font-weight: bold;
+    font-size: 15px;
+    border: 4px solid #457648;
+    transition: background-color .3s, color .3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #fffdfa;
+    color: #457648;
+}
+
+
+.alert {
+    color: #ff4500;
+    margin: 0 0 10px 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.title {
+    display: inline-block;
+}
+
+
+input {
+    padding: 0 10px;
+}
+
+textarea {
+    padding: 10px;
+}

@@ -1,0 +1,373 @@
+@charset "utf-8";
+
+
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h2 {
+    margin: 180px 0 15px 0;
+
+}
+
+.anchor {
+    padding-top: 160px;
+
+}
+
+
+.date {
+    background-color: #457648;
+    /* line-height: 50px; */
+
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+
+}
+
+.weekday {
+    font-size: 20px;
+
+}
+
+.date .flex {
+    justify-content: center;
+    gap: 70px;
+    margin: 0 20px;
+}
+
+.date .flex li {
+    padding: 10px 0;
+
+}
+
+.date .flex li a {
+    position: relative;
+    display: inline-block;
+    color: #fffdfa;
+    transition: color .3s;
+}
+
+.date .flex li a:hover {
+    color: #ff4500;
+}
+
+
+.weekday::after {
+    content: '▼';
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    /* padding-bottom: 10px; */
+    margin-top: 10px;
+    line-height: 0;
+}
+
+/* タイムテーブル */
+
+h2 {
+    font-family: 'Spicy Rice', cursive;
+    /* font-size: 85px; */
+    color: #fffdfa;
+    text-align: center;
+    margin: 15px 0;
+}
+
+
+
+.box {
+    max-width: 1000px;
+    height: 75px;
+    border-radius: 15px;
+    background-color: #fffdfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #457648;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 40px 30px;
+
+}
+
+/* 余白たち */
+.inner-1 {
+    padding-top: 30px;
+}
+
+.day {
+    font-size: 20px;
+    margin-left: 0.5em;
+}
+
+.last {
+    padding-bottom: 30px;
+}
+
+.bg-2 {
+    margin-top: 30px;
+}
+
+
+
+/* 見出し画像のフルードイメージ対応 */
+.last img {
+    max-width: 100%;
+    /* 親要素に合わせて伸び縮みさせる＋もとの画像サイズ以上に無理に引き伸ばされることはならない */
+    height: auto;
+}
+
+/* 縦横比を保護：可変的な横幅に合わせて、縦横比が崩れないように高さも合わせる */
+
+/* figure部分のフルード対応 */
+/* .fadeUpTrigger figure{ */
+/* width: 48%;     2つあるfigureの横幅を48%ずつ割り当て（残りの4%が間の余白になる） */
+/* } */
+
+/* 見出し画像のフルードイメージ対応
+.fadeUpTrigger figure img{
+    max-width: 100%;
+    height: auto;
+} */
+
+
+/* -----------------------------------------
+  チェックボックスを非表示 （最後に追記）
+----------------------------------------- */
+.nav-switch {
+    display: none;
+}
+
+
+
+
+/* -----------------------------------------
+  768px以下の画面に向けた記述
+----------------------------------------- */
+
+@media screen and (max-width:768px) {
+
+    /* ヘッダー */
+    header{
+    
+       
+        width: 100%;
+        /* fixedにより縮まってしまう横幅を直す */
+        padding: 10px 0;
+        /* 余白を小さくする */
+    }
+
+    header h1 {
+        line-height: 1;
+        /* 余計な余白を外す */
+    }
+
+    header h1 img {
+       
+        /* ロゴのサイズを小さくする */
+        height: auto;
+        /* 縦横比を保護 */
+    }
+
+   
+
+
+    /* 文字揃えが両端揃えになるよう整える
+    （画面幅が小さいと行送りが増えてバラつきが目立つため） */
+    .text {
+        text-align: justify;
+    }
+
+
+
+
+
+    /* ハンバーガーボタンを作る */
+    .nav-burger {
+        display: block;
+        /* widthとheightを効かせるためのdisplay切り替え */
+        width: 30px;
+        /* 背景画像の分のサイズを確保 */
+        height: 30px;
+
+        /* ↓ 三本線のボタン画像を背景画像として差し込む */
+        background-image: url(../images/burger_03.png);
+
+        position: fixed;
+        /* ブラウザの上から16px、右から16pxの位置に固定 */
+        top: 16px;
+        right: 16px;
+        z-index: 2;
+        /* 重なり順の指定 */
+    }
+
+
+
+    /* 三本線のボタンと✕のボタンの切り替え */
+
+    /* チェックが入っている状態(:checked)の「nav-switch」(inputタグ)の
+    「弟である(~)」、「nav-burger」の背景画像を×ボタンの画像に差し替える */
+    .nav-switch:checked~.nav-burger {
+        background-image: url(../images/close_03.png);
+    }
+
+    /* マウスカーソルの調整 */
+    .nav-burger:hover {
+        cursor: pointer;
+    }
+
+
+    /* ナビゲーションが開いたときの見た目を仕上げる ＝ スタイルを作り変える */
+    .navi {
+        background-color: rgba(251, 246, 246, 0.9);
+        position: fixed;
+        /* ブラウザの画面いっぱいに広げて固定 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        /* 余白の調整 */
+        margin: 0;
+        padding-top: 100px;
+        z-index: 1;
+    }
+
+    nav ul li a {
+        color: #fff;
+        margin: 15px 0;
+    }
+
+    nav ul li a:hover {
+        color: rgba(255, 255, 255, 0.6);
+        background: transparent;
+    }
+
+
+
+    nav .flex {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+
+    /* 横並びを縦並びに変える */
+    nav ul li {
+        border: none;
+        border-top: 1px solid #aaa;
+        background-color: transparent;
+        width: auto;
+        line-height: 60px;
+
+    }
+
+    nav ul li:last-child {
+        border-bottom: 1px solid #aaa;
+    }
+
+
+    /* ★★★ html要編集 !
+  ... navタグに表示/非表示切り替え用のclass名「navi」を追加 */
+
+    /* class名「navi」を使ってnavタグを丸ごと非表示にする */
+    .navi {
+        display: none;
+    }
+
+    /* inputタグにチェックが入ると「navi」が再表示される */
+    .nav-switch:checked~.navi {
+        display: block;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+}
+
+
+
+
+
+/* -----------------------------------------
+  ここから500px以下の画面に向けた記述
+----------------------------------------- */
+
+/* 最小320px幅での表示でも表示崩れがない状態を目指す */
+
+@media screen and (max-width:500px) {
+
+
+    /* ★画像の縮まりすぎに対処 */
+
+    /* まずはheightを固定して縦の縮まりすぎを制御 */
+    /* 縦横比を保護するためにobject-fitとobject-positionを使って画像をカット処理 */
+    h2 img {
+        height: 160px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* 各所余白や文字サイズを細かく修正 */
+
+
+
+    /* section部分 */
+    section {
+        padding: 0;
+    }
+
+
+    section h2 {
+        font-size: 16px;
+        margin: 0 15px 20px;
+    }
+
+
+
+    /* .text部分 */
+    .text {
+        margin: 0 20px 20px;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    /* figure部分の横並びを縦積みに変更して余白を再調整 */
+    main .flex {
+        flex-direction: column;
+        margin: 0 20px 50px;
+    }
+
+    /* 幅を再指定（48% → 100%）、余白の調整、画像の真ん中寄せ */
+    main figure {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* 商品名のキャプションを左揃え */
+    main figcaption {
+        text-align: left;
+    }
+
+    /* フッター */
+    /* コピーライトの位置を調整 */
+    footer {
+        text-align: center;
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+}
