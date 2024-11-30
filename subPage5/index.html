@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT | Hamoney Festival 2025</title>
+
+    <!-- リセット -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- コモン -->
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- コンタクト -->
+    <link rel="stylesheet" href="../css/contact.css">
+
+    <!-- グーグルフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+
+    <!-- ↓ ここにjQuery本体ファイルの読み込み -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- ↓ ここに自作jsファイルの読み込み -->
+    <script src="../js/contact.js"></script>
+
+    <!-- ファビコン -->
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon-180x180.png">
+</head>
+
+<body>
+    <header class="bg-1 flex">
+        <a href="#">
+            <h1><img src="../images/logo1_450x75.svg" alt="Harmony Festival 2025 in Gotemba" width="450"
+                    height="75"></h1>
+        </a>
+       
+         <!-- ↓　ここにハンバーガーボタンのコードを設置　↓ -->
+         <input type="checkbox" id="navSet" class="nav-switch">
+         <label for="navSet" class="nav-burger"></label>
+
+        <nav class="navi">
+            <ul class="flex">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../subPage1/index.html">ARTISTS</a></li>
+                <li><a href="../subPage2/index.html">TIME TABLE</a></li>
+                <li><a href="../subPage3/index.html">ACCESS</a></li>
+                <li><a href="../subPage4/index.html">TICKETS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h2>-CONTACT-</h2>
+
+        <div class="inner-1">
+            <div>
+                <p class="top-text">Harmony Festival 2025 に関するお問い合わせは以下のフォームからお問い合わせ下さい。</p></div>
+
+            <form action="program.php" method="post">
+                <dl class="contact">
+                    <div id="nameSection">
+                        <dt class="title"><label for="name">お名前(必須)</label><span class="alert">入力してください</span></dt>
+                        <dd class="space"><input type="text" name="userName" id="name"></dd>
+                    </div>
+
+                    <div>
+                        <dt class="title"><label for="userName">法人名</label></dt>
+                        <dd class="space"><input type="text" name="corporateName" id="corporateName"></dd>
+                    </div>
+
+                    <div id="emailSection">
+                        <dt class="title"><label for="email">メールアドレス(必須)</label><span class="alert">入力してください</span></dt>
+                        <dd class="space"><input type="text" name="email" id="email"></dd>
+                    </div>
+
+                    <div id="telephoneSection">
+                        <dt class="title"><label for="telephoneNumber">電話番号(必須)</label><span class="alert">入力してください</span></dt>
+                        <dd class="space"><input type="text" name="telephoneNumber" id="telephoneNumber"></dd>
+                    </div>
+
+                    <div class="radio" id="radioSection">
+                        <dt class="title">内容(必須)<span class="alert">入力してください</span></dt>
+                        <dd class="space">
+                            <label><input type="radio" name="radio" value="フェスに概要について">フェスに概要について</label>
+                            <label><input type="radio" name="radio" value="アーティストについて">アーティストについて</label>
+                            <label><input type="radio" name="radio" value="チケットについて">チケットについて</label>
+                            <label><input type="radio" name="radio" value="タイムテーブルについて">タイムテーブルについて</label>
+                            <label><input type="radio" name="radio" value="その他のお問い合わせ">その他のお問い合わせ</label>
+                        </dd>
+                    </div>
+
+                    <div id="textAreaSection">
+                        <dt class="title"><label for="message">本文(必須)</label></dt>
+                        <dd class="alert">入力してください</dd>
+                        <dd class="space"><textarea name="message" id="message"></textarea></dd>
+                    </div>
+
+                </dl>
+
+                <div class="btn"><input type="submit" id="submitBtn" value="送信"></div>
+            </form>
+
+
+    </main>
+    </div>
+    <footer class="bg-2">
+        <div class="logo">
+            <img src="../images/logo2_460x76.svg" alt="Harmony Festival 2025 in Gotemba" width="460" height="76">
+        </div>
+        <nav>
+            <ul class="flex">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../subPage1/index.html">ARTISTS</a></li>
+                <li><a href="../subPage2/index.html">TIME TABLE</a></li>
+                <li><a href="../subPage3/index.html">ACCESS</a></li>
+                <li><a href="../subPage4/index.html">TICKETS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <p><small>&copy;2024 HARMONY HESTIVAL 2025</small></p>
+    </footer>
+
+    <div class="top-btn spicy-rice-regular">
+        <p><a href="#">TOP</a></p>
+    </div>
+
+
+</body>
+
+</html>

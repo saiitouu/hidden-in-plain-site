@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIME TABLE | Hamoney Festival 2025</title>
+
+    <!-- リセット -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- コモン -->
+    <link rel="stylesheet" href="../css/common.css">
+    <!-- タイムテーブルのCSS -->
+    <link rel="stylesheet" href="../css/timetable.css">
+    <!-- ↓ ここにjQuery本体ファイルの読み込み -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- ↓ ここに自作jsファイルの読み込み -->
+    <script src="../js/timetable.js"></script>
+
+    <!-- グーグルフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+
+    <!-- ファビコン -->
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon-180x180.png">
+
+</head>
+
+<body>
+    <div class="fixed">
+        <header class="bg-1 flex">
+            <a href="#">
+                <h1><img src="../images/logo1_450x75.svg" alt="Harmony Festival 2025 in Gotemba" width="450"
+                        height="75"></h1>
+            </a>
+            
+              <!-- ↓　ここにハンバーガーボタンのコードを設置　↓ -->
+              <input type="checkbox" id="navSet" class="nav-switch">
+              <label for="navSet" class="nav-burger"></label>
+  
+            <nav class="navi">
+                <ul class="flex">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../subPage1/index.html">ARTISTS</a></li>
+                    <li><a href="#">TIME TABLE</a></li>
+                    <li><a href="../subPage3/index.html">ACCESS</a></li>
+                    <li><a href="../subPage4/index.html">TICKETS</a></li>
+                    <li><a href="../subPage5/index.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <div class="date">
+            <ul class="flex">
+                <li><a href="#sec1">8/9<span class="weekday"> SAT</span></a></li>
+                <li><a href="#sec2">8/10<span class="weekday"> SUN</span></a></li>
+                <li><a href="#sec3">8/11<span class="weekday"> MON</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="anchor">-TIME TABLE-</h2>
+
+
+    <div class="inner-1">
+        <main>
+            <h4 class="box">8/9<span class="day"> SAT</span></h4>
+            <div id="sec1" class="last">
+                <img src="../images/tt_01_1036x1610.png" alt="8/9のタイムテーブル" width="1036" height="1610">
+            </div>
+
+            <h4 class="box">8/10<span class="day"> SUN</span></h4>
+            <div id="sec2" class="last"><img src="../images/tt_02_1036x1610.png" alt="8/10のタイムテーブル" width="1036"
+                    height="1610">
+            </div>
+
+            <h4 class="box">8/11<span class="day"> MON</span></h4>
+            <div id="sec3" class="last">
+                <img src="../images/tt_03_1036x1610.png" alt="8/11のタイムテーブル" width="1036" height="1610">
+            </div>
+
+
+
+        </main>
+    </div>
+
+    <footer class="bg-2">
+        <div class="logo">
+            <img src="../images/logo2_460x76.svg" alt="Harmony Festival 2025 in Gotemba" width="460" height="76">
+        </div>
+        <nav>
+            <ul class="flex">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../subPage1/index.html">ARTISTS</a></li>
+                <li><a href="#">TIME TABLE</a></li>
+                <li><a href="../subPage3/index.html">ACCESS</a></li>
+                <li><a href="../subPage4/index.html">TICKETS</a></li>
+                <li><a href="../subPage5/index.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <p><small>&copy;2024 HARMONY HESTIVAL 2025</small></p>
+    </footer>
+
+
+    <div class="top-btn spicy-rice-regular">
+        <p><a href="#">TOP</a></p>
+    </div>
+</body>
+
+</html>
